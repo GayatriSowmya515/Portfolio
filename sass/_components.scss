@@ -1,0 +1,141 @@
+
+
+ .head{
+     grid-row: 1/2;
+     height: 100%;
+    width: 100%
+}
+@keyframes head-anime{
+    from{
+        opacity: 0;
+        transform: translateY(-7rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeleft{
+    from{
+        opacity: 0;
+        transform: translateX(7rem);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeLeft{
+    0%{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+@keyframes fadeRight{
+    0%{
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    50%{
+        opacity: 0;
+        transform: translateX(-5rem);
+    }
+    100%{
+        opacity: 1;
+        transform: translateX(0);
+    }
+
+}
+
+
+
+.btn-head{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-size: 2rem;
+    background-color: var(--color-background-4);
+    border: 0.6rem solid var(--color-background-2);
+    box-shadow: var(--shadow-light);
+    z-index: 2; 
+    text-decoration: none;
+    color:var(--color-background-2);
+}
+.btn-head:hover{
+    transform: translateY(-4px);
+    transition: all 0.25s;
+}
+.btn-head:active{
+   background-color:#F9A825;
+   transition: all 0.2s;
+}
+
+[data-scroll] {
+    transition: all 1.2s;
+  }
+  
+  .card[data-scroll="in"]{
+    opacity: 1;
+    transform:scale(auto) translateY(0);
+  }
+  .card[data-scroll="out"]{
+    opacity: 0;
+    transform:scale(.75) translateY(50px);
+  }
+
+  .projects-title[data-scroll="in"]{
+      opacity: 1;
+      transform: translateY(0);
+  }
+  .projects-title[data-scroll="out"]{
+      opacity: 0;
+      transform: translateY(-6rem);
+  }
+
+  .education-head[data-scroll="in"]{
+      opacity:1;
+      transform: translateX(0);
+  }
+  .education-head[data-scroll="out"]{
+      opacity: 0;
+      transform: translateX(5rem);
+  }
+  .education-context[data-scroll="in"]{
+    opacity:1;
+    transform: translateX(0);
+}
+.education-context[data-scroll="out"]{
+    opacity: 0;
+    transform: translateX(-5rem);
+}
+
+  
+  
+  
+  
+  ::-webkit-scrollbar{
+    width: 10px;
+    background-color: var(--color-background-2);
+  }
+  ::-webkit-scrollbar-thumb{
+    background: #1976D2;//var(--color-background-1);//$color-tertiary-light;
+    border-radius: 3px;
+  }
+  ::-webkit-scrollbar-thumb:hover{
+    background:  #1565C0;
+  
+  }
+  
+

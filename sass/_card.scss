@@ -1,0 +1,189 @@
+.card {
+    //FUNTIONALITY
+    // perspective: 150rem;
+    // -moz-perspective: 150rem;
+    height: 28rem;
+    position: relative;
+    
+  
+    &__side {
+      color: #fff;
+      font-size: 2rem;
+      height: 28rem;
+      transition: all 0.8s ease;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      -webkit-backface-visibility: hidden;
+      backface-visibility: hidden;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+  
+      &--front {
+        background-color: $color-white;
+      }
+      &--back {
+        transform: rotateY(180deg);
+        background-image: linear-gradient(
+            to right bottom,
+            $color-background-3,
+            $color-background-5
+          );
+      }
+    }
+  
+    &:hover &__side--front {
+      transform: rotateY(-180deg);
+    }
+    &:hover &__side--back {
+      transform: rotateY(0);
+    }
+  
+    //FRONT SIDE STYLING
+  
+    &__picture {
+      background-size: cover;
+      height: 100%;
+      background-blend-mode: screen;
+      // -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      // clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+      // border-top-right-radius: 3px;
+  
+      &--1 {
+        background-image: 
+          url(../img/TodoFinal.png);
+          background-position: center;
+          background-size: cover;
+      }
+      &--2 {
+        background-image: 
+          url(../img/WeatherAppFianl.png);
+          background-position: center;
+          background-size: cover;
+      }
+      &--3 {
+        background-image: 
+          url(../img/ClaciFinal.png);
+          background-position: center;
+          background-size: cover;
+      }
+      &--4 {
+        background-image: 
+          url(../img/TicTacToeFinal.png);
+          background-position: right;
+          background-size: cover;
+      }
+      &--5 {
+        background-image: 
+          url(../img/TodoListDjango.png);
+          background-position: center;
+          background-size: cover;
+      }
+      &--6 {
+        background-image: 
+          url(../img/ChaQuaFinal.png);
+          background-position: center;
+          background-size: cover;
+      }
+    }
+
+  
+    //FRONT STYLE STYLING
+    &__cta {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90%;
+      text-align: center;
+      display: grid;
+      grid-gap: 2rem;
+      grid-template-rows: 3fr 2fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      &-text{
+        grid-row: 1/2;
+        grid-column: 1/4;
+      }
+      &-btn{
+        color: #fff;
+        font-size: 1.8rem;
+        text-decoration: none;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        grid-row: 2/3;
+        grid-column: 2/3;
+        height: 5rem;
+        width: 100%;
+        //top: 50%;
+        text-align: center;
+        cursor: pointer;
+        border: 0.5rem solid var(--color-background-2);
+        box-shadow: var(--shadow-light);
+        z-index: 2; 
+        //transform: translateX(-50%);
+        background-color: var(--color-background-4);
+      }
+      &-btn:hover{
+        transform: translateY(-4px);
+        transition: all 0.25s;
+      }
+      &-btn:active{
+        background-color:#F9A825;
+        transition: all 0.2s;
+      }
+    
+    }
+  
+   
+    //@include respond(tab-port) {
+    @media only screen and (max-width: 56.25em), only screen and (hover: none) {
+      .card {
+        //FUNTIONALITY
+        // perspective: 150rem;
+        // -moz-perspective: 150rem;
+        height: 28rem;
+        position: relative;
+        
+      
+        &__side {
+          color: #fff;
+          font-size: 2rem;
+          height: 28rem;
+          transition: all 0.8s ease;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+          border-radius: 3px;
+          overflow: hidden;
+          box-shadow: 0 1.5rem 4rem rgba($color-black, 0.5);
+      
+          &--front {
+            background-color: $color-white;
+          }
+          &--back {
+            transform: rotateY(180deg);
+            background-image: linear-gradient(
+                to right bottom,
+                $color-background-3,
+                $color-background-5
+              );
+          }
+        }
+      
+        &:active &__side--front {
+          transform: rotateY(-180deg);
+        }
+        &:active &__side--back {
+          transform: rotateY(0);
+        }
+      }
+  
+    }
+  }
+  
